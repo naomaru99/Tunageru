@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   private
-  def configure_permitted_parameters.for(:sign_up) << :name_last, :name_first, :name_kana_last, :name_kana_first
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << [:name_last, :name_first, :name_kana_last, :name_kana_first]
   end
 
 

@@ -1,6 +1,12 @@
-<h1>Tunageru</h1>
-  <p>Tunageru</p>
-  <%= link_to '学生の方の新規登録', new_student_registration_path %>
-  <%= link_to '社会人の方の新規登録', new_worker_registration_path %>
-  <%= link_to '学生の方のログアウト', destroy_student_session_path %>
-  <%= link_to '社会人の方のログアウト', destroy_worker_session_path %>
+  <div class="header">
+    <h1>Tunageru</h1>
+  </div>
+
+  <div class="navi">
+  <p>
+    <%= link_to '学生の方の新規登録', new_student_registration_path %>&nbsp;&nbsp;&nbsp;
+    <%= link_to '社会人の方の新規登録', new_worker_registration_path %>&nbsp;&nbsp;&nbsp;
+    <%= link_to '学生の方のログアウト', destroy_student_session_path %>&nbsp;&nbsp;&nbsp;
+    <%= link_to '社会人の方のログアウト', destroy_worker_session_path %>
+    </p>
+  </div>
