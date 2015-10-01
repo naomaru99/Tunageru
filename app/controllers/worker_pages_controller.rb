@@ -1,0 +1,2 @@
+class WorkerPagesController < ApplicationController
+end
