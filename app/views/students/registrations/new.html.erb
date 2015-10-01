@@ -3,6 +3,7 @@
 <h2>学生の新規登録</h2>
 
 <p>
+<%= link_to '導入ページに戻る', introduction_index_path %>
 <%= render "students/shared/links" %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>

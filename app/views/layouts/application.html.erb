@@ -8,6 +8,22 @@
 </head>
 <body>
 
+<div class="top_navi">
+  <span id="navi_logo">
+    <%= link_to image_tag('logos/black_square.png'), root_path %>
+  </span>
+  <span id="navi_words">
+    <h1>Tunageru</h1>
+    <p>
+    <% if student_signed_in? %>
+      <%= link_to '学生のログアウト', destroy_student_session_path, method: :delete %>
+    <% elsif worker_signed_in? %>
+      <%= link_to '社会人のログアウト', destroy_worker_session_path, method: :delete %>
+    <% end %>
+    </p>
+  </span>
+</div>
+
 <%= yield %>
 
 </body>
