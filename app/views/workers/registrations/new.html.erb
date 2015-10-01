@@ -1,26 +1,31 @@
+<div class="worker_registration">
+
 <h2>社会人の新規登録</h2>
+
+<%= render "workers/shared/links" %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+
   <div class="field">
-    <%= f.label :name_last %><br />
-    <%= f.text_field :name_last, autofocus: true %>
+    <%= f.label :family_name %><br />
+    <%= f.text_field :family_name , autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :name_first %><br />
-    <%= f.text_field :name_first, autofocus: true %>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :name_kana_last %><br />
-    <%= f.text_field :name_kana_last, autofocus: true %>
+    <%= f.label :family_name_kana %><br />
+    <%= f.text_field :family_name_kana, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :name_kana_first %><br />
-    <%= f.text_field :name_kana_first, autofocus: true %>
+    <%= f.label :first_name_kana %><br />
+    <%= f.text_field :first_name_kana, autofocus: true %>
   </div>
 
   <div class="field">
@@ -46,4 +51,5 @@
   </div>
 <% end %>
 
-<%= render "workers/shared/links" %>
+
+  </div>

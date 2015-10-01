@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150928122820) do
+ActiveRecord::Schema.define(version: 20151001081726) do
 
   create_table "students", force: :cascade do |t|
     t.string   "email",                   limit: 255,   default: "", null: false
@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 20150928122820) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",      limit: 255
     t.string   "last_sign_in_ip",         limit: 255
-    t.string   "name_last",               limit: 255
-    t.string   "name_first",              limit: 255
-    t.string   "name_kana_last",          limit: 255
-    t.string   "name_kana_first",         limit: 255
+    t.string   "family_name",             limit: 255
+    t.string   "first_name",              limit: 255
+    t.string   "family_name_kana",        limit: 255
+    t.string   "first_name_kana",         limit: 255
     t.text     "image",                   limit: 65535
     t.string   "sex",                     limit: 255
     t.string   "age",                     limit: 255
@@ -54,10 +54,10 @@ ActiveRecord::Schema.define(version: 20150928122820) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
-    t.string   "name_last",              limit: 255
-    t.string   "name_first",             limit: 255
-    t.string   "name_kana_last",         limit: 255
-    t.string   "name_kana_first",        limit: 255
+    t.string   "family_name",            limit: 255
+    t.string   "first_name",             limit: 255
+    t.string   "family_name_kana",       limit: 255
+    t.string   "first_name_kana",        limit: 255
     t.text     "image",                  limit: 65535
     t.string   "sex",                    limit: 255
     t.string   "age",                    limit: 255

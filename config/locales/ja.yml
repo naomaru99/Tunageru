@@ -4,6 +4,11 @@ ja:
     password: パスワード
     group_id: グループ名
     user: ユーザー
+    family_name: 姓
+    first_name: 名
+    family_name_kana: セイ
+    first_name_kana: メイ
+    password_confirmation: パスワード（確認用）
   date:
     abbr_day_names:
     - 日
