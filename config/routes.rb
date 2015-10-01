@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   }
 
   root to: "top#index"
-
+  resources :introduction, only: :index
 end
