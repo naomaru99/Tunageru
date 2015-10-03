@@ -32,6 +32,20 @@
   }
   p{
     float: right;
-    line-height: 30px
+    line-height: 30px;
+    a{
+
+      &:link{
+        color: #fff;
+      }
+      &:visited{
+        color: #fff;
+      }
+      &:hover{
+        color: #fff;
+      }
+    }
+
   }
+
 }
