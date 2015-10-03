@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   root to: "top#index"
   resources :introduction, only: :index
-  resources :student_pages, only: [:show, :edit, :update]
-  resources :worker_pages, only: [:show, :edit, :update]
+  resources :students, only: [:show, :edit, :update]
+  resources :workers, only: [:show, :edit, :update]
 
 end

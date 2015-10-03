@@ -16,12 +16,12 @@
     <h1>Tunageru</h1>
     <p>
     <% if student_signed_in? %>
-      <%= link_to "マイページ", student_page_path(current_student) %>
-      <%= link_to "(編集)", edit_student_page_path(current_student) %>&nbsp;&nbsp;&nbsp;
+      <%= link_to "マイページ", student_path(current_student) %>
+      <%= link_to "(編集)", edit_student_path(current_student) %>&nbsp;&nbsp;&nbsp;
       <%= link_to '学生のログアウト', destroy_student_session_path, method: :delete %>
     <% elsif worker_signed_in? %>
-      <%= link_to "マイページ", worker_page_path(current_worker) %>
-      <%= link_to "(編集)", edit_worker_page_path(current_worker) %>&nbsp;&nbsp;&nbsp;
+      <%= link_to "マイページ", worker_path(current_worker) %>
+      <%= link_to "(編集)", edit_worker_path(current_worker) %>&nbsp;&nbsp;&nbsp;
       <%= link_to '社会人のログアウト', destroy_worker_session_path, method: :delete %>
     <% end %>
     </p>
