@@ -1,8 +1,45 @@
   <div class="header">
 
 
-
-
   </div>
 
 
+検索テキストフィールド<br>
+
+おすすめ社会人一覧
+
+
+<% if student_signed_in? %>
+
+
+
+<div class="recomend_users">
+
+
+
+  <%= render partial: "worker", collection: @workers %>
+
+
+</div>
+
+
+
+
+
+
+<% elsif worker_signed_in? %>
+
+
+
+
+<div class="recomend_users">
+
+  <%= render partial: "student", collection: @students %>
+
+
+</div>
+
+
+
+
+<% end %>

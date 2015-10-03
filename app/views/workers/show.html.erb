@@ -1,3 +1,9 @@
+<div class="user_info">
+  <div class="avatar">
+    <% if @worker.avatar_file_name %>
+      <img src="<%= @worker.avatar.url(:medium) %>">
+    <% end %>
+  </div>
   <div class="user_name">
     <div class="kanji">
       <h2><%= @worker.name %></h2>
@@ -6,3 +12,4 @@
       <p><%= @worker.name_kana %></p>
     </div>
   </div>
+</div>
