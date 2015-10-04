@@ -14,7 +14,9 @@
  *= require_tree .
  *= require_self
  */
-
+body{
+  color: #312f2d;
+}
 
 .top_navi{
   background-color: #d09b98;
@@ -42,7 +44,9 @@
   
   h1{
     display: inline;
+
     margin-left: 200px;
+
     text-align: center;
     font-size: 30px;
   }
