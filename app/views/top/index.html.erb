@@ -6,12 +6,18 @@
 
 検索テキストフィールド<br>
 
-おすすめ社会人一覧
+
 
 
 <% if student_signed_in? %>
 
+<div class="recomend_top_comment">
 
+  <h3>悩みを先輩たちに相談してみよう！</h3>
+  <p><%= current_student.name %>さんにおすすめの先輩たち </p>
+
+
+</div>
 
 <div class="recomend_users">
 
@@ -29,6 +35,13 @@
 
 <% elsif worker_signed_in? %>
 
+<div class="recomend_top_comment">
+
+  <h3>後輩たちの相談に乗ってあげよう！</h3>
+  <p><%= current_worker.name %>さんに近い後輩たち </p>
+
+
+</div>
 
 
 

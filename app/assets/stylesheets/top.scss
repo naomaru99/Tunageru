@@ -3,6 +3,30 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.recomend_top_comment{
+  text-align: center;
+
+  h3{
+    // background-color: #d09b98;
+    color: #d09b98;
+    padding: 10px;
+    margin: 30px auto 50px;
+    width: 500px;
+    // border-radius: 10px;
+    border-style: solid;
+  }
+
+  p{
+    font-size: 20px;
+    background-color: #f1f3f1;
+    padding: 10px;
+    margin: 0 auto ;
+    width: 400px;
+    // border-radius: 10px;
+
+  }
+}
+
 
 .recomend_users{
 
@@ -11,7 +35,26 @@
   background-color: #f1f3f1;
   padding: 20px 0 40px;
   margin: 30px 100px;
+
+  .user_info{
+    a{
+      text-decoration: none;
+
+  &:link{
+        color: #312f2d;
+      }
+  &:visited{
+        color: #312f2d;
+      }
+  &:hover{
+        color: #312f2d;
+      }
+    }
   }
+
+
+  }
+
 
 }
 
