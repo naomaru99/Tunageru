@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :introduction, only: :index
   resources :students, only: [:show, :edit, :update]
   resources :workers, only: [:show, :edit, :update]
-  resources :message_rooms, only: [:show]
+  resources :message_rooms, only: [:index, :show]
   resources :messages, only:[:create]
 
 end

@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003082407) do
+ActiveRecord::Schema.define(version: 20151006051613) do
 
   create_table "message_rooms", force: :cascade do |t|
     t.integer  "student_id", limit: 4
     t.integer  "worker_id",  limit: 4
-    t.integer  "message_id", limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(version: 20151003082407) do
     t.text     "text",            limit: 65535
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.integer  "message_room_id", limit: 4
   end
 
   create_table "students", force: :cascade do |t|

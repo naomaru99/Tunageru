@@ -6,6 +6,36 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+
+  def current_user(column)
+    if columun == ""
+      if student_signed_in?
+        current_student
+      elsif worker_signed_in?
+        current_worker
+      end
+
+    else
+      if student_signed_in?
+        current_student.(column)
+      elsif worker_signed_in?
+        current_worker.(column)
+      end
+    end
+  end
+
+  def current_user_type
+    if student_signed_in?
+      student
+    elsif worker_signed_in?
+      woreker
+    else
+      guest
+    end
+  end
+
+        
+
   def after_sign_out_path_for(resource)
      introduction_index_path
   end
@@ -18,7 +48,7 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [:family_name, :first_name, :family_name_kana, :first_name_kana, :avatar]
+    devise_parameter_sanitizer.for(:sign_up) << [:family_name, :first_name, :family_name_kana, :first_name_kana, :avatar, :email, :sex, :age, :area, :university, :company, :industry_interested, :job_category_interested, :introduce]
   end
 
 
