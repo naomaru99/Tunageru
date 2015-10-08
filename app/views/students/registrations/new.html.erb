@@ -6,6 +6,9 @@
 <%= link_to '導入ページに戻る', introduction_index_path %>
 <%= render "students/shared/links" %>
 
+
+<%= link_to 'facebook認証', '/students/auth/:action/callback' %>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 

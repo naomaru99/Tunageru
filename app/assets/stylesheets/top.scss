@@ -3,6 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.search_area{
+
+  .search_selectboxs{
+    text-align: center;
+    width: 400px;
+    margin: 10px auto;
+    float: left;
+  }
+
+  .search_textareas{
+    text-align: center;
+    width: 400px;
+    margin: 10px auto;
+  }
+}
+
 .recomend_top_comment{
   text-align: center;
 

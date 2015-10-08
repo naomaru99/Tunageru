@@ -1,6 +1,8 @@
 class Message < ActiveRecord::Base
 
   #アソシエーション
-  belongs_to :messagable, polymorphic: true
+  belongs_to :message_room
+
+
 
 end

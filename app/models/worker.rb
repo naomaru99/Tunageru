@@ -6,7 +6,7 @@ class Worker < ActiveRecord::Base
 
 
   #アソシエーション
-  has_many :messages, as: :messagable
+  has_many :message_rooms
 
 
 
@@ -21,6 +21,34 @@ class Worker < ActiveRecord::Base
     "#{family_name_kana} #{first_name_kana}"
   end
 
+
+
+
+
+
+
+
+
+  def self.find_for_oauth(auth)
+    worker = Worker.where(uid: auth.uid, provider: auth.provider).first
+
+    unless worker
+      worker = Worker.create(
+        uid:      auth.uid,
+        provider: auth.provider,
+        email:    Worker.dummy_email(auth),
+        password: Devise.friendly_token[0, 20]
+      )
+    end
+
+    worker
+  end
+
+  private
+
+  def self.dummy_email(auth)
+    "#{auth.uid}-#{auth.provider}@example.com"
+  end
 
 
   

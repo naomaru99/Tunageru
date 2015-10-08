@@ -49,4 +49,7 @@ gem 'pry-rails'
 gem 'devise'
 gem 'paperclip'
 gem 'kaminari'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 

@@ -16,6 +16,7 @@
 
     <a href="<%= root_path %>"><h1>Tunageru</h1></a>
     <p>
+
       <% if student_signed_in? %>
         <a href="<%= student_path(current_student) %>">
           <% if current_student.avatar_file_name %>
@@ -25,7 +26,9 @@
         </a>
         &nbsp;
         <%= link_to "(編集)", edit_student_path(current_student) %>&nbsp;&nbsp;&nbsp;
+        <a href="<%= message_rooms_path %>">メッセージ</a>&nbsp;&nbsp;&nbsp;
         <%= link_to 'ログアウト', destroy_student_session_path, method: :delete %>
+
       <% elsif worker_signed_in? %>
         <a href="<%= worker_path(current_worker) %>">
           <% if current_worker.avatar_file_name %>
@@ -33,13 +36,15 @@
           <% end %>
           <%= current_worker.name %>
         </a>
-        &nbsp;
         <%= link_to "(編集)", edit_worker_path(current_worker) %>&nbsp;&nbsp;&nbsp;
+        <a href="<%= message_rooms_path %>">メッセージ</a>&nbsp;&nbsp;&nbsp;
         <%= link_to 'ログアウト', destroy_worker_session_path, method: :delete %>
+
       <% end %>
+
     </p>
   </span>
-</div>f
+</div>
 
 <%= yield %>
 

@@ -1,0 +1,35 @@
+  <% if student_signed_in? %>
+    <a href="<%= message_room_path(message_room.worker_id) %>">
+      <div class="message_room">
+        <% if message_room.worker.avatar_file_name %>
+          <img src="<%= message_room.worker.avatar.url(:medium)%>">&nbsp;&nbsp;&nbsp;
+        <% end %>
+        <div class="name">
+          <%= message_room.worker.name %> <br>
+        </div>
+        <div class="text">
+          <%= message_room.messages.last.text %>
+        </div>
+
+      </div>
+
+    </a>
+
+
+  <% elsif worker_signed_in? %>
+    <a href="<%= message_room_path(message_room.student_id) %>">
+      <div class="message_room">
+      
+        <% if message_room.student.avatar_file_name %>
+          <img src="<%= message_room.student.avatar.url(:medium)%>">&nbsp;&nbsp;&nbsp;
+        <% end %>
+        <div class="name">
+          <%= message_room.student.name %> <br>
+        </div>
+        <div class="text">
+          <%= message_room.messages.last.text %>
+        </div>
+      </div>
+    </a>
+
+  <% end %>

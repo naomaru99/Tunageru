@@ -7,32 +7,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
-  def current_user(column)
-    if columun == ""
-      if student_signed_in?
-        current_student
-      elsif worker_signed_in?
-        current_worker
-      end
 
-    else
-      if student_signed_in?
-        current_student.(column)
-      elsif worker_signed_in?
-        current_worker.(column)
-      end
-    end
-  end
-
-  def current_user_type
-    if student_signed_in?
-      student
-    elsif worker_signed_in?
-      woreker
-    else
-      guest
-    end
-  end
 
         
 
