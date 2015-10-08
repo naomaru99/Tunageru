@@ -1,0 +1,45 @@
+<div class="user_info">
+  <div class="avatar">
+    <% if @worker.avatar_file_name %>
+      <img src="<%= @worker.avatar.url(:medium) %>">
+    <% end %>
+  </div>
+  <div class="user_name">
+    <div class="kanji">
+      <h2><%= @worker.name %></h2>
+    </div>
+    <div class="kana">
+      <p><%= @worker.name_kana %></p>
+    </div>
+
+    <p>
+      <%= @worker.sex %><br>
+
+      <%= @worker.age %>歳<br>
+
+      <%= @worker.area %><br>
+
+      <%= @worker.graduated_university %><br>
+
+      <%= @worker.company %><br>
+
+      <%= @worker.industry %><br>
+
+      <%= @worker.job_category%><br>
+
+      <%= @worker.position %><br>
+
+      <%= @worker.introduce %><br>
+
+    </p>
+
+    <% if student_signed_in? %>
+      <div class="ask_out">
+        <p>
+          <%= link_to "この先輩に悩みを相談してみる", message_room_path(@worker.id) %>
+        </p>
+      </div>
+    <% end %>
+
+  </div>
+</div>

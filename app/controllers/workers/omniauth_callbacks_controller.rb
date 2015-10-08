@@ -25,4 +25,8 @@ class Workers::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # def after_omniauth_failure_path_for(scope)
   #   super(scope)
   # end
+
+
+
+
 end

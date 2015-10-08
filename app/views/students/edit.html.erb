@@ -1,0 +1,51 @@
+<div class="edit_user_info">
+
+  <%= form_for current_student do |f| %>
+
+    <h2>プロフィール画像</h2>
+      <div class="form-group file">
+        <%= f.file_field :avatar, class: "form-control floating-label form-avatar", placeholder: "画像アップロード" %>
+      </div>
+
+    <h2>登録情報</h2>
+
+    <div class="edit_user_contents">
+      <div class="form-names">
+        <%= f.text_field :family_name, placeholder: "姓", class: "form-control form-name" %>
+
+        <%= f.text_field :first_name, placeholder: "名", class: "form-control form-name"%>
+      </div>
+
+      <div class="form-names_kana">
+        <%= f.text_field :family_name_kana, placeholder: "セイ", class: "form-control form-name-kana" %>
+
+        <%= f.text_field :first_name_kana, placeholder: "メイ", class: "form-control form-name-kana" %>
+      </div>
+      
+      <%= f.text_field :email, placeholder: "メールアドレス", class: "form-control form-email" %>
+
+      <%= f.text_field :sex, placeholder: "性別", class: "form-control form-sex" %>
+
+      <%= f.text_field :age, placeholder: "年齢", class: "form-control form-age" %>
+
+      <%= f.text_field :area, placeholder: "地域", class: "form-control form-area" %>
+
+      <%= f.text_field :university, placeholder: "大学名", class: "form-control form-university" %>
+
+      <%= f.text_field :industry_interested, placeholder: "志望業界", class: "form-control form-industry" %>
+
+      <%= f.text_field :job_category_interested, placeholder: "興味のある職種", class: "form-control form-job" %>
+
+      <%= f.text_area :introduce, placeholder: "自己紹介", class: "form-control form-introduce" %>
+
+    </div>
+
+
+
+
+
+    <%= f.submit "送信", class: "btn btn-primary withripple" %>
+
+  <% end %>
+
+</div>

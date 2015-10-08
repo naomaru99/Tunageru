@@ -13,5 +13,12 @@ Rails.application.routes.draw do
   }
 
   root to: "top#index"
+  get 'top' => "top#index"
+  post 'top' => 'top#search'
+  resources :introduction, only: :index
+  resources :students, only: [:show, :edit, :update]
+  resources :workers, only: [:show, :edit, :update]
+  resources :message_rooms, only: [:index, :show]
+  resources :messages, only:[:new, :create]
 
 end

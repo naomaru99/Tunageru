@@ -1,0 +1,187 @@
+  <div class="header">
+
+
+  </div>
+
+
+<div class="search_area">
+
+    <%= form_tag('/top') do %>
+
+    <div class="search_selectboxs">
+
+    <div class="search_sex">
+      <select name="sex">
+        <option selected>性別</option>
+        <option>男</option>
+        <option>女</option>
+      </select>
+    </div>
+
+    <div class="search_age">
+      <select name="age">
+        <option selected>年齢</option>
+        <option value="2*">20代</option>
+        <option value="3*">30代</option>
+        <option value="4*">40代以上</option>
+      </select>
+    </div>
+
+    <div class="search_area">
+      <select name="area">
+        <option value="" selected>都道府県
+        <option value="北海道">北海道
+        <option value="青森県">青森県
+        <option value="岩手県">岩手県
+        <option value="宮城県">宮城県
+        <option value="秋田県">秋田県
+        <option value="山形県">山形県
+        <option value="福島県">福島県
+        <option value="茨城県">茨城県
+        <option value="栃木県">栃木県
+        <option value="群馬県">群馬県
+        <option value="埼玉県">埼玉県
+        <option value="千葉県">千葉県
+        <option value="東京都">東京都
+        <option value="神奈川県">神奈川県
+        <option value="新潟県">新潟県
+        <option value="富山県">富山県
+        <option value="石川県">石川県
+        <option value="福井県">福井県
+        <option value="山梨県">山梨県
+        <option value="長野県">長野県
+        <option value="岐阜県">岐阜県
+        <option value="静岡県">静岡県
+        <option value="愛知県">愛知県
+        <option value="三重県">三重県
+        <option value="滋賀県">滋賀県
+        <option value="京都府">京都府
+        <option value="大阪府">大阪府
+        <option value="兵庫県">兵庫県
+        <option value="奈良県">奈良県
+        <option value="和歌山県">和歌山県
+        <option value="鳥取県">鳥取県
+        <option value="島根県">島根県
+        <option value="岡山県">岡山県
+        <option value="広島県">広島県
+        <option value="山口県">山口県
+        <option value="徳島県">徳島県
+        <option value="香川県">香川県
+        <option value="愛媛県">愛媛県
+        <option value="高知県">高知県
+        <option value="福岡県">福岡県
+        <option value="佐賀県">佐賀県
+        <option value="長崎県">長崎県
+        <option value="熊本県">熊本県
+        <option value="大分県">大分県
+        <option value="宮崎県">宮崎県
+        <option value="鹿児島県">鹿児島県
+        <option value="沖縄県">沖縄県
+      </select> 
+    </div>
+
+    <div class="search_industry">
+      <select name="industry">
+        <option selected>業界</option>
+        <option>食品</option>
+        <option>サービス</option>
+        <option>金融</option>
+        <option>コンサル</option>
+        <option>流通</option>
+        <option>出版</option>
+        <option>IT</option>
+        <option>商社</option>
+        <option>広告代理店</option>
+        <option>不動産</option>
+      </select>
+    </div>
+
+    <div class="search_job_category">
+      <select name="job_category">
+        <option selected>職種</option>
+        <option>営業</option>
+        <option>エンジニア</option>
+        <option>コンサル</option>
+        <option>マーケティング</option>
+        <option>デザイン</option>
+        <option>マネジメント</option>
+        <option>接客</option>
+        <option>人事</option>
+      </select>
+    </div>
+
+    </div> <!-- search_selectboxs -->
+
+
+    <div class="search_textareas">
+    <div class="search_university">
+      <input placeholder="大学" type="text" name="university" class="form-control">
+    </div>
+
+    <div class="search_company">
+      <input placeholder="企業名" type="text" name="company" class="form-control">
+    </div>
+
+    <div class="search_keyword">
+      <input placeholder="フリーキーワード" type="text" name="keyword" class="form-control">
+    </div>
+
+      <input type="submit" value="検索" class="btn btn-primary withripple">
+      
+    </div><!-- search_textareas -->
+
+    <% end %>
+
+  </div> <!-- search_area -->
+
+
+
+
+
+<% if student_signed_in? %>
+
+<div class="recomend_top_comment">
+
+  <h3>悩みを先輩たちに相談してみよう！</h3>
+  <p><%= current_student.name %>さんにおすすめの先輩たち </p>
+
+
+</div>
+
+<div class="recomend_users">
+
+
+
+  <%= render partial: "worker", collection: @workers %>
+
+
+</div>
+
+
+
+
+
+
+<% elsif worker_signed_in? %>
+
+<div class="recomend_top_comment">
+
+  <h3>後輩たちの相談に乗ってあげよう！</h3>
+  <p><%= current_worker.name %>さんに近い後輩たち </p>
+
+
+</div>
+
+
+
+<div class="recomend_users">
+
+  <%= render partial: "student", collection: @students %>
+
+
+</div>
+
+
+
+
+<% end %>

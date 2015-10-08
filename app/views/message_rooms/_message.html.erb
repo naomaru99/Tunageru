@@ -1,0 +1,69 @@
+  <br>
+
+ 
+    <% if student_signed_in? %>
+      <% if message.user_type == "student" %>
+        <div class="my_message">
+            <a href="<%= student_path(current_student) %>">
+              <% if current_student.avatar_file_name %>
+                <img src="<%= current_student.avatar.url(:medium)%>">&nbsp;&nbsp;&nbsp;
+              <% end %>
+              <div class="name">
+              <%= current_student.name %> <br>
+              </div>
+            </a>
+          <div class="text">
+            <%= message.text %>
+          </div>
+        </div>
+
+      <% else %>
+        <div class="another_message">
+          <a href="<%= worker_path(@worker.id) %>">
+            <% if @worker.avatar_file_name %>
+              <img src="<%= @worker.avatar.url(:medium)%>">&nbsp;&nbsp;&nbsp;
+            <% end %>
+            <div class="name">
+              <%= @worker.name %> <br>
+            </div>
+            </a>
+          <div class="text">
+            <%= message.text %>
+          </div>
+        </div>
+      <% end %>
+
+    <% elsif worker_signed_in? %>
+      <% if message.user_type == "worker" %>
+        <div class="my_message">
+          <a href="<%= worker_path(current_worker) %>">
+            <% if current_worker.avatar_file_name %>
+              <img src="<%= current_worker.avatar.url(:medium)%>">&nbsp;&nbsp;&nbsp;
+            <% end %>
+          <div class="name">
+            <%= current_worker.name %> <br>
+          </div>
+          </a>
+          <div class="text">
+            <%= message.text %>
+          </div>
+        </div>
+      <% else %>
+        <div class="another_message">
+          <a href="<%= student_path(@student.id) %>">
+            <% if @student.avatar_file_name %>
+              <img src="<%= @student.avatar.url(:medium)%>">&nbsp;&nbsp;&nbsp;
+            <% end %>
+            <div class="name">
+              <%= @student.name %> <br>
+            </div>
+          </a>
+            <div class="text">
+              <%= message.text %>
+            </div>
+        </div>
+      <% end %>
+
+    <% end %>
+
+

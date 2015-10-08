@@ -1,0 +1,88 @@
+.edit_user_info{
+  margin: 10px auto;
+  text-align: center;
+  .form-avatar{
+    width: 300px;
+    margin: 10px auto;
+  }
+  .edit_user_contents{
+
+    width: 400px;
+    margin: 0 auto;
+
+    // .form{
+    //   margin: 20px auto;
+    //   width: 400px;
+    // }
+
+      // .form_names{
+      // width: 250px;
+      // margin: 20px auto;
+
+      .form-name{
+        width: 100px;
+        margin: 5px auto;
+        float: left;
+      }
+
+    // }
+      
+    // .form_names_kana{
+      // width: 250px;
+
+      .form-name-kana{
+        width: 100px;
+        margin: 5px auto 10px;
+        float: left;
+      }
+
+    // }
+
+    .form-email{
+      width: 300px;
+      margin: 10px auto;
+    }
+
+    .form-sex{
+      width: 50px;
+      margin: 10px auto;
+    }
+
+    .form-age{
+      width: 50px;
+      margin: 10px auto;
+    }
+
+    .form-area{
+      width: 100px;
+      margin: 10px auto;
+    }
+
+    .form-university{
+      width: 200px;
+      margin: 10px auto;
+    }
+
+    .form_job{
+      width: 100px;
+      margin: 10px auto;
+    }
+
+    .form_position{
+      width: 100px;
+      margin: 10px auto;
+    }
+
+    .form-introduce{
+      margin: 10px auto;
+    }
+
+    .form-company{
+      width: 100px;
+      margin: 10px auto;
+    }
+
+
+
+  }
+}

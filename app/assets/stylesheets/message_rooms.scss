@@ -1,0 +1,127 @@
+// Place all the styles related to the message_rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.message_room_index{
+
+    .message_rooms{
+      width: 800px;
+      margin: 30px auto;
+
+      a{
+        &:link{
+          color: #312f2d;
+        }
+        &:visited{
+          color: #312f2d;
+        }
+        &:hover{
+          text-decoration: none;
+        }
+      }
+
+    
+    .message_room{
+      background-color: #dfe1e1;
+      text-align: center;
+      margin: 20px;
+      padding: 30px;
+
+      .name{
+        display: inline;
+      }
+
+      .text{
+        margin-top: 20px;
+      }
+
+      img{
+        width: 35px;
+        border-radius: 35px;
+      }
+
+      
+    }
+
+  }
+
+
+} //message_room_index
+
+
+
+
+
+.message_room{
+
+  .message_title{
+    margin: 20px;
+    text-align: center;
+    font-size: 25px;
+
+  }
+
+  
+  .messages{
+    width: 600px;
+    margin: 10px auto;
+
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+    .my_message{
+      background-color: #87ff6a;
+      text-align: right;
+      padding: 30px;
+      border-radius: 20px;
+
+      img{
+        width: 35px;
+        border-radius: 100%;
+      }
+
+      .name{
+        display: inline;
+      }
+
+      .text{
+        margin-top: 10px;
+      }
+
+    }
+
+    .another_message{
+      background-color: #dfe1e1;
+      text-align: left;
+      padding: 30px;
+      border-radius: 20px;
+
+      img{
+        width: 35px;
+        border-radius: 35px;
+      }
+
+      .name{
+        display: inline;
+      }
+
+      .text{
+        margin-top: 10px;
+      }
+
+    }
+
+  }
+
+
+  .form{
+    width: 400px;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+}
