@@ -25,28 +25,4 @@ class Student < ActiveRecord::Base
 
 
 
-  def self.find_for_oauth(auth)
-    student = Student.where(uid: auth.uid, provider: auth.provider).first
-
-    unless student
-      student = Student.create(
-        uid:      auth.uid,
-        provider: auth.provider,
-        email:    Stuedent.dummy_email(auth),
-        password: Devise.friendly_token[0, 20]
-      )
-    end
-
-    student
-  end
-
-  private
-
-  def self.dummy_email(auth)
-    "#{auth.uid}-#{auth.provider}@example.com"
-  end
-
-
-
-
 end

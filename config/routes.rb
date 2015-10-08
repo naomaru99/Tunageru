@@ -3,19 +3,14 @@ Rails.application.routes.draw do
   devise_for :workers, controllers: {
     sessions: 'workers/sessions',
     passwords: 'workers/passwords',
-    registrations: 'workers/registrations',
-    # omniauth_callbacks: 'workers/omniauth_callbacks'
+    registrations: 'workers/registrations'
   }
 
   devise_for :students, controllers: {
     sessions: 'students/sessions',
     passwords: 'students/passwords',
-    registrations: 'students/registrations',
-    # omniauth_callbacks: 'students/omniauth_callbacks'
+    registrations: 'students/registrations'
   }
-
-  get "/workers/auth/:action/callback", :to => "workers/omniauth_callbacks", :constraints => { :action => /facebook/ }
-  get "/students/auth/:action/callback", :to => "students/omniauth_callbacks", :constraints => { :action => /facebook/ }
 
   root to: "top#index"
   get 'top' => "top#index"
